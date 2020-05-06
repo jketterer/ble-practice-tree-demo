@@ -307,9 +307,8 @@ public class RaceActivity extends AppCompatActivity {
         HashMap<Long, Long> dialIdMap = new HashMap<>();
         dialIdMap.put(1L, dial1);
         dialIdMap.put(2L, dial2);
-//        dialIdMap.put(3L, dial3);
-        // TODO: change to 4
-        dialIdMap.put(3L, dial4);
+        dialIdMap.put(3L, dial3);
+        dialIdMap.put(4L, dial4);
 
         // Place each dial-in inside a TreeMap
         TreeMap<Long, Long> dials = new TreeMap<>();
@@ -344,9 +343,8 @@ public class RaceActivity extends AppCompatActivity {
         final TreeMap<Long, PracticeTree> practiceTreeMap = new TreeMap<>();
         practiceTreeMap.put(1L, tree1);
         practiceTreeMap.put(2L, tree2);
-//        practiceTreeMap.put(3L, tree3);
-        // TODO: change to 4
-        practiceTreeMap.put(3L, tree4);
+        practiceTreeMap.put(3L, tree3);
+        practiceTreeMap.put(4L, tree4);
 
         // Keep track of the highest dial-in
         long highestDial = dialIdMap.get(queue.peek());
@@ -361,8 +359,7 @@ public class RaceActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     // Make sure to keep track of the time the local user's tree began
-                    // TODO: remove the currentId == 3 check
-                    if (currentId == ((long) racerId) || (currentId == 3 && racerId == 4)) {
+                    if (currentId == (long) racerId) {
                         startTime = System.currentTimeMillis();
                     }
                     PracticeTree currentTree = practiceTreeMap.get(currentId);
@@ -471,15 +468,28 @@ public class RaceActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
-            if ("START_RACE".equals(action)) {
+            // Once all users have staged, the server will notify each user,
+            // and send this broadcast
+            if (BleServerService.START_RACE.equals(action)) {
                 startRace();
-            } else if ("STAGE_UPDATE".equals(action)) {
+            }
+            // The server will notify whenever a user has stage or unstaged,
+            // and send this broadcast
+            else if (BleServerService.STAGE_UPDATE.equals(action)) {
                 parseStageData(intent);
-            } else if ("RACE_FINISHED".equals(action)) {
+            }
+            // Once all users have sent their reaction times, the server will notify,
+            // and send this broadcast
+            else if (BleServerService.RACE_FINISHED.equals(action)) {
                 readRtsFromServer();
-            } else if ("DIAL_UPDATE".equals(action)) {
+            }
+            // When the BLE service receives dial-in info from a read, and send this broadcast
+            else if (BleServerService.DIAL_UPDATE.equals(action)) {
                 updateDial(intent);
-            } else if ("RT_UPDATE".equals(action)) {
+            }
+            // When a user sends their reaction time to the server, it will notify,
+            // and send this broadcast
+            else if (BleServerService.RT_UPDATE.equals(action)) {
                 updateRt(intent);
             }
         }
@@ -521,7 +531,11 @@ public class RaceActivity extends AppCompatActivity {
     // Create an intent filter so the BroadcastReceiver only checks for specific broadcasts
     private static IntentFilter makeGattUpdateIntentFilter() {
         final IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("START_RACE");
+        intentFilter.addAction(BleServerService.STAGE_UPDATE);
+        intentFilter.addAction(BleServerService.RACE_FINISHED);
+        intentFilter.addAction(BleServerService.START_RACE);
+        intentFilter.addAction(BleServerService.DIAL_UPDATE);
+        intentFilter.addAction(BleServerService.RT_UPDATE);
         intentFilter.addAction(BleGattService.STAGE_UPDATE);
         intentFilter.addAction(BleGattService.RACE_FINISHED);
         intentFilter.addAction(BleGattService.START_RACE);

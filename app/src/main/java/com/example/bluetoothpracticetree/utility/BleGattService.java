@@ -387,6 +387,7 @@ public class BleGattService extends Service {
         final byte[] data = characteristic.getValue();
         if (data != null && data.length > 0) {
             intent.putExtra(EXTRA_DATA, new String(data));
+            intent.putExtra(CHARACTERISTIC_UUID, characteristic.getUuid().toString());
         }
 
         sendBroadcast(intent);

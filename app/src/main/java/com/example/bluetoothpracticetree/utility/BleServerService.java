@@ -59,6 +59,8 @@ public class BleServerService extends Service {
             "com.example.bluetoothpracticetree.STAGE_UPDATE";
     public final static String START_RACE =
             "com.example.bluetoothpracticetree.START_RACE";
+    public final static String RACE_FINISHED =
+            "com.example.bluetoothpracticetree.RACE_FINISHED";
 
     private final int MAX_CLIENTS = 1;
 
@@ -387,13 +389,13 @@ public class BleServerService extends Service {
 
             // Inform the host device that a client has updated their stage flag
             if (UuidUtils.RACER_1_STAGE.equals(characteristic.getUuid())) {
-                broadcastUpdate("STAGE_UPDATE", "1" + Arrays.toString(characteristic.getValue()));
+                broadcastUpdate(STAGE_UPDATE, "1" + Arrays.toString(characteristic.getValue()));
                 notifyDevices(characteristic);
             } else if (UuidUtils.RACER_2_STAGE.equals(characteristic.getUuid())) {
-                broadcastUpdate("STAGE_UPDATE", "2" + Arrays.toString(characteristic.getValue()));
+                broadcastUpdate(STAGE_UPDATE, "2" + Arrays.toString(characteristic.getValue()));
                 notifyDevices(characteristic);
             } else if (UuidUtils.RACER_3_STAGE.equals(characteristic.getUuid())) {
-                broadcastUpdate("STAGE_UPDATE", "3" + Arrays.toString(characteristic.getValue()));
+                broadcastUpdate(STAGE_UPDATE, "3" + Arrays.toString(characteristic.getValue()));
                 notifyDevices(characteristic);
             }
 
@@ -470,7 +472,7 @@ public class BleServerService extends Service {
                         notifyDevices(raceReady);
 
                         // Tell host device to start race
-                        broadcastUpdate("START_RACE");
+                        broadcastUpdate(START_RACE);
 
                         // Reset race ready characteristic
                         raceReady.setValue("stop");
@@ -498,15 +500,14 @@ public class BleServerService extends Service {
         if (!raceDone
                 && !Arrays.equals(empty.getBytes(), racer1Rt.getValue())
                 && !Arrays.equals(empty.getBytes(), racer2Rt.getValue())
-                // TODO: uncomment
-//                && !Arrays.equals(empty.getBytes(), racer3Rt.getValue())
+                && !Arrays.equals(empty.getBytes(), racer3Rt.getValue())
                 && !Arrays.equals(empty.getBytes(), racerHostRt.getValue())) {
             // Set race finished flag to true and notify clients
             raceFinished.setValue("1");
             notifyDevices(raceFinished);
 
             // Notify host device
-            broadcastUpdate("RACE_FINISHED");
+            broadcastUpdate(RACE_FINISHED);
             raceDone = true;
         } else {
             // Set race finished flag to false
