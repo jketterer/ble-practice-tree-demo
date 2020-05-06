@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10sp">
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/prestage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/stage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/top_yellow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/mid_yellow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/bot_yellow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/green1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#4CAF50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/red1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#AF4c30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <TextView
+                android:id="@+id/rt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10sp">
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/prestage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/stage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/top_yellow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/mid_yellow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/bot_yellow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/green2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#4CAF50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/red2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#AF4c30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <TextView
+                android:id="@+id/rt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10sp">
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/prestage3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/stage3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/top_yellow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/mid_yellow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/bot_yellow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB3B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/green3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#4CAF50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/red3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#AF4c30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <TextView
+                android:id="@+id/rt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10sp">
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/prestage4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB4B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/stage4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB4B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="60" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/top_yellow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB4B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/mid_yellow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB4B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/bot_yellow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#FFEB4B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/green4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#4CAF50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <com.example.bluetoothpracticetree.practicetree.Bulb
+                android:id="@+id/red4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="255"
+                app:color="#AF4c40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="5sp"
+                app:radius="90" />
+
+            <TextView
+                android:id="@+id/rt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="" />
+        </LinearLayout>
+        
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/stage_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="Stage"
+        tools:layout_editor_absoluteX="161dp" />
+
+</LinearLayout>

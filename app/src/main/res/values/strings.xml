@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BluetoothPracticeTree</string>
+    <string name="host">Host Race</string>
+    <string name="join">Join Race</string>
+    <string name="settings">Settings</string>
+    <string name="host_progress">Waiting for others…</string>
+    <string name="begin_race">Begin Race</string>
+    <string name="available_hosts">Available Hosts:</string>
+    <string name="wait_for_host">Waiting for host to start the race…</string>
+    <string name="connecting">Connecting to host…</string>
+    <string name="racer_id">Racer ID: </string>
+    <string name="dial">Dial-in</string>
+    <string name="save">Save</string>
+    <string name="rollout">Rollout</string>
+    <string name="current">Current: %s</string>
+    <string name="name">Name</string>
+    <string name="ok">OK</string>
+</resources>

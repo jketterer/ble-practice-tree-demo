@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30sp">
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:maxLength="8" />
+
+    <TextView
+        android:id="@+id/current_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/current" />
+
+    <Button
+        android:id="@+id/save_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:text="@string/save" />
+
+    <EditText
+        android:id="@+id/edit_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/dial"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/current_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/current" />
+
+    <Button
+        android:id="@+id/save_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:text="@string/save" />
+
+    <EditText
+        android:id="@+id/edit_rollout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="20sp"
+        android:hint="@string/rollout"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/current_rollout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/current" />
+
+    <Button
+        android:id="@+id/save_rollout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save" />
+</LinearLayout>
